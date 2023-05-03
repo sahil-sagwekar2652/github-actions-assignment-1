@@ -1,0 +1,15 @@
+name: assignment 1 complex workflow
+
+on: [push]
+
+jobs:
+  job1:
+    name: print_date
+    runs-on: ubuntu-latest
+  job2:
+    runs-on: windows-latest
+  job3:
+    runs-on: macos-latest
+  job4:
+    runs-on: windows-2019
+    needs: [job1, job2, job3]
